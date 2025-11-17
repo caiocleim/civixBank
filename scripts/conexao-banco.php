@@ -3,6 +3,6 @@
     $servidor = "localhost";
     $banco = "db_civix-bank";
     $usuario = "root";
-    $senha = "1234";
+    $senha = "";
 
     $conexao = new mysqli($servidor,$usuario,$senha,$banco);

@@ -1,6 +1,6 @@
 <?php 
 
-require $_SERVER['DOCUMENT_ROOT'] . '../civix-bank/scripts/conexao-banco.php';
+require $_SERVER['DOCUMENT_ROOT'] . '../civixBank/scripts/conexao-banco.php';
 
 
     $num_conta=$_SESSION['conta_user'];

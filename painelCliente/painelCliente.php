@@ -2,7 +2,7 @@
 session_start();
 
 if($_SESSION['sessao-logada'] == TRUE){
-   require $_SERVER['DOCUMENT_ROOT'] . '../civix-bank/painelCliente/scripts/atualizarDados.php';
+   require $_SERVER['DOCUMENT_ROOT'] . '../civixBank/painelCliente/scripts/atualizarDados.php';
 
 }else{
     header("Location: ../index.php");
