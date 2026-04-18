@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Graphik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+}
+
+body{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+header{
+    height: 60px;
+    width: 100%;
+
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.164);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+header img{
+    height: 35px;
+    width: auto;
+    border-radius: 50%;
+}
+
+header p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.transfer-box{
+    height: 180px;
+    width: 100%;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.068);
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.up-transfer{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.middle-tranfer{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.foot-transfer{
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.blank-space{
+    margin-bottom: 200px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: #612DC3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-inferior img{
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.icon-inferior img:hover{
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.164);
+    transition: 1s;
+}
+
+.icon-inferior a{
+    text-decoration: none;
+    color:white;
+    font-weight: 500;
+}
