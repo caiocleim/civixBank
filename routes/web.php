@@ -13,14 +13,19 @@ switch($url){
         break;
 
     case '/check-login':
-        require_once BASE_PATH . '/app/controllers/LoginController.php';
-        require_once BASE_PATH . '/app/controllers/ViewController.php';
+        require_once BASE_PATH . "/app/controllers/ErrorController.php";
+        require_once BASE_PATH . "/app/controllers/LoginController.php";
+        
 
+        try{
+            #autentica o usuario e configura a session
+            $AuthLogin = new LoginController();
 
-        #autentica o usuario e configura a session
-        $AuthLogin = new LoginController();
-
-        $AuthLogin->checarLogin();
+            $AuthLogin->checarLogin();
+        }catch(Exception $erro){
+            $indiceErros = new ErrorController();
+            $indiceErros->exibir($erro);
+        }
 
         if($_SESSION['usuario-credenciais'] != NULL){
             $paginaCliente = new ViewController();
@@ -28,8 +33,10 @@ switch($url){
         }else{
             echo "Erro";
         }
-
-        
-
         break;
+
+        case '/logout':
+            session_unset();
+            header("Location: /");
+            break;
 }
