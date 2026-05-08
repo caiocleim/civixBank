@@ -40,7 +40,7 @@
         </div>
 
         
-        <a class="sair" href="../index.php">Sair</a>
+        <a class="sair" href="/logout">Sair</a>
     </header>
     <div class="blank-space"></div>
     <div class="body-page">
