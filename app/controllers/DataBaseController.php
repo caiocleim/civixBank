@@ -19,7 +19,7 @@ class DataBase{
 
     }
 
-    public function buscarUsuario($usuarioDigitado,$senhaDigitada){
+    public function buscarUsuario($usuarioDigitado){
         $conexao = $this->conectar();
 
         $sql = "SELECT * FROM usuario WHERE num_conta = ? LIMIT 1";
@@ -35,7 +35,29 @@ class DataBase{
         }else{
             header("Location: /login=?Erro");
         }
-    }   
+    }
+
+    public function buscarDadosPessoais($num_conta){
+        $conexao = $this->conectar();
+
+        $sql = "SELECT * FROM cliente
+        INNER JOIN usuario
+        ON usuario.id = cliente.usuario_id
+        WHERE usuario.num_conta LIKE ?";
+
+        $stmt = $conexao->prepare($sql);
+        $stmt->bind_param("s",$num_conta);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+        $dados = $resultado->fetch_assoc();
+
+        if($dados !== null){
+            return $dados;
+        }else{
+            header("Location: /login=?Erro");
+        }
+
+    }
 
 
 }
