@@ -2,7 +2,7 @@
 
 class Usuario{
 
-    public function checarLogin(){
+    public function autenticarUsuario(){
         require_once BASE_PATH . "/app/models/Database.php";
         
         $usuarioDigitado = $_POST['conta'];
@@ -22,9 +22,9 @@ class Usuario{
                 session_start();
                 $_SESSION['usuario-credenciais'] = $dadosCliente;
                 $_SESSION['dados-pessoais'] = $dadosPessoais;
-                return;
+                return true;
             }else{
-                throw new Exception("101");
+                return 101;
             }
             
 

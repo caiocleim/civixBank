@@ -3,14 +3,14 @@
 
 class ErrorController{
 
-    public function exibir($codigo){
+    public function exibir($codigoDoErro){
 
         $mensagens = [
 
             '101' => 'Senha incorreta. Tente novamente'
         ];
 
-        header("Location: /login?=" . $codigo);
+        header("Location: /login?=" . $mensagens['101']);
     }
 
 

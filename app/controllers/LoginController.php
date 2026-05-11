@@ -5,13 +5,13 @@ class LoginController{
 
     public function checarLogin(){
         require_once BASE_PATH . "/app/models/Usuario.php";
+        require_once BASE_PATH . "/app/controllers/ErrorController.php";
 
         $autenticarUsuario = new Usuario();
-        $dados = $autenticarUsuario->checarLogin();
+        $retorno = $autenticarUsuario->autenticarUsuario();
 
-        if($dados == NULL){
-            return;
-        }
+        return $retorno;
+
     }
 
 

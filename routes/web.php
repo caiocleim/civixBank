@@ -15,23 +15,18 @@ switch($url){
     case '/check-login':
         require_once BASE_PATH . "/app/controllers/ErrorController.php";
         require_once BASE_PATH . "/app/controllers/LoginController.php";
+        require_once BASE_PATH . "/app/controllers/ViewController.php";
         
-
-        try{
-            #autentica o usuario e configura a session
-            $AuthLogin = new LoginController();
-
-            $AuthLogin->checarLogin();
-        }catch(Exception $erro){
-            $indiceErros = new ErrorController();
-            $indiceErros->exibir($erro);
-        }
+        #autentica o usuario e configura a session
+        $AuthLogin = new LoginController();
+        $retorno = $AuthLogin->checarLogin();
 
         if($_SESSION['usuario-credenciais'] != NULL){
             $paginaCliente = new ViewController();
             $paginaCliente->paginaDoCliente();
         }else{
-            echo "Erro";
+            $erro = new ErrorController();
+            $erro->exibir($retorno);
         }
         break;
 
