@@ -10,7 +10,24 @@
 <body>
     <div class="main-page">
 
-    <img src="assets/img/logo-civix-bank.png" alt="">
+    <a href="/"><img src="assets/img/logo-civix-bank.png" alt="Civix Bank"></a>
+
+        
+
+        <?php
+            if(isset($_GET['ErrorPage'])){
+                ?>
+                <div id="error-bar">
+                <?php
+
+                echo "Erro " . $_GET['ErrorPage'] . ": " . $_GET['msgError'];
+                
+                ?>
+                </div>
+                <?php
+            }
+            
+        ?>
 
         <form action="/check-login" method="post">
             <div class="input-box">
@@ -20,7 +37,7 @@
 
             <div class="input-box">
                 <label>Senha da Conta*</label>
-                <input type="password" name="senha" placeholder="Digite a senha...">
+                <input type="password" name="senha" placeholder="Digite a senha..." required>
             </div>
 
             <div class="input-box">
