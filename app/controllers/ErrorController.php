@@ -7,10 +7,20 @@ class ErrorController{
 
         $mensagens = [
 
-            '101' => 'Senha incorreta. Tente novamente'
+            [
+                "codigo" => "101",
+                "mensagem" => "Login e senha incorretos, verifique suas credenciais."
+            ],
         ];
 
-        header("Location: /login?=" . $mensagens['101']);
+
+        foreach($mensagens as $erro){
+            if($codigoDoErro == $erro['codigo']){
+                header("Location: /?ErrorPage=" . $erro['codigo'] . "&msgError=" . $erro['mensagem']);
+
+            }
+        }
+
     }
 
 
