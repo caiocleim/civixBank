@@ -41,7 +41,7 @@
             </div>
 
             <div class="input-box">
-                <a href="#">Crie sua conta</a>
+                <a href="/criarConta">Crie sua conta</a>
             </div>
 
             <div class="button-box">

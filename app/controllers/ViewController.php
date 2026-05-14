@@ -12,7 +12,9 @@ class ViewController{
         require_once BASE_PATH . '/views/cliente/painelCliente.php';
     }
 
-
+    public function paginaCriarConta(){
+        require_once BASE_PATH . '/views/criarConta.php';
+    }
 
 
 }

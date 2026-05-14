@@ -12,6 +12,12 @@ switch($url){
 
         break;
 
+    case '/criarConta':
+        require_once BASE_PATH . "/app/controllers/ViewController.php";
+        $paginaCriarConta = new ViewController();
+        $paginaCriarConta->paginaCriarConta();
+        break;
+
     case '/check-login':
         require_once BASE_PATH . "/app/controllers/ErrorController.php";
         require_once BASE_PATH . "/app/controllers/LoginController.php";
@@ -26,7 +32,7 @@ switch($url){
             $paginaCliente->paginaDoCliente();
         }else{
             $erro = new ErrorController();
-            $erro->exibir($retorno);
+            $erro->exibir("/",$retorno);
         }
         break;
 
