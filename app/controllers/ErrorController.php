@@ -3,7 +3,7 @@
 
 class ErrorController{
 
-    public function exibir($codigoDoErro){
+    public function exibir($urlAtual,$codigoDoErro){
 
         $mensagens = [
 
@@ -16,7 +16,7 @@ class ErrorController{
 
         foreach($mensagens as $erro){
             if($codigoDoErro == $erro['codigo']){
-                header("Location: /?ErrorPage=" . $erro['codigo'] . "&msgError=" . $erro['mensagem']);
+                header("Location: " . $urlAtual . "?ErrorPage=" . $erro['codigo'] . "&msgError=" . $erro['mensagem']);
 
             }
         }
