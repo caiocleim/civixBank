@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
@@ -29,7 +30,7 @@ body{
     height: 500px;
     background-color: white;
     border-radius: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 
 }
 
@@ -73,24 +74,25 @@ body{
     
 }
 
-#column-box-2{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 50px;
-
-    top: 130px;
-    left: 20px;
-}
-
-#column-box-2 input{
-    
+#column-box select{
     width: 400px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.405);
-    text-align:center;
-    
-    
+}
+
+#btn-next-form{
+    width: 70px;
+    height: 50px;
+    background-color: #5608e8;
+    border-radius: 30%;
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

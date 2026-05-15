@@ -27,25 +27,48 @@
 
                 <div id="input-box">
                     <div id="column-box">
-                        <h3>Nome</h3>
-                        <input type="text" placeholder="Seu nome...">
+                        <h3>Nome completo</h3>
+                        <input type="text" placeholder="Seu nome completo...">
                     </div>
                     
-                    <div id="column-box">
-                        <h3>Sobrenome</h3>
-                        <input type="text" placeholder="Seu sobrenome...">
-                    </div>
 
-                    <div id="column-box-2">
+                    <div id="column-box">
                         <h3>CPF</h3>
                         <input type="text" placeholder="Digite seu CPF...">
                     </div>
+
+                    <div id="column-box">
+                        <h3>Estado</h3>
+                        <select>
+                            <option value="">-- Selecione um estado --</option>
+                            <option value="">SP</option>
+                            <option value="">MG</option>
+
+                        </select>
+                    </div>
+
+                    <div id="column-box">
+                        <h3>Data de Nascimento</h3>
+                        <input type="date" name="" id="">
+                    </div>
+
                     
                     
                 </div>
 
+
+                <a href="" onclick="">
+                    <div id="btn-next-form">
+                    Avançar
+                    </div>
+                </a>
+                
+            
             </div>
 
+            </div>
+
+            
 
         </div>
 
